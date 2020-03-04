@@ -59,8 +59,7 @@ OPEN SYMMETRIC KEY SymmetricKey1
 DECRYPTION BY CERTIFICATE Certificate1;
 --GO
 -- Now list the original ID, the encrypted ID 
-SELECT username, CONVERT(varchar, DecryptByKey(Password__encrypt)) --AS 'Encrypted Credit Card Number',
- --AS 'Decrypted Credit Card Number'
+SELECT username, CONVERT(varchar, DecryptByKey(Password__encrypt))
 FROM dbo.SignIn;
  
  -- Close the symmetric key
